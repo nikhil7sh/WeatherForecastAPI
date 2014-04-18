@@ -5,8 +5,9 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp"/>
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <property name="java-output-path" value="/WeatherWebAPP/build/classes"/>
-        <property name="context-root" value="WebAPP"/>
+        <property name="context-root" value="WeatherWebAPP"/>
     </wb-module>
 </project-modules>
