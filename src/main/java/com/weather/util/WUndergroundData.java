@@ -1,7 +1,8 @@
 package com.weather.util;
 
+
 /**
-* This WUndergroundData class comprises of CurrentObservation object instance
+* WUndergroundData class comprises of CurrentObservation object instance
 * 
 * @author Nikhil
 */

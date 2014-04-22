@@ -1,8 +1,5 @@
 package com.weather.controller;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -22,17 +19,17 @@ import com.weather.util.WUndergroundData;
  */
 @Controller
 public class WeatherController {
-
 	private WeatherService weatherService;
 	@Autowired
 	public WeatherController(WeatherService weatherService){
 		this.weatherService=weatherService;
 
 	}
+	
 	/**
-	 * method to handle request coming from the app
-	 * @param reuest, response.
-	 * @return ModelandView object
+	 * This WeatherController controller of this app 
+	 *
+	 * @author Nikhil
 	 */
 	@RequestMapping(method=RequestMethod.GET, value="/weather")
 	public ModelAndView handleRequest(HttpServletRequest request,
@@ -41,6 +38,7 @@ public class WeatherController {
 		String zip = request.getParameter("zip");
 		weatherService.retrieveForecast(zip);
 		WUndergroundData weather= weatherService.getWeatherData();
+		System.out.println("i am in handle request"+weather);
 		if(weather.getCurrentObservation()==null){
 			String errorMsg="Zip code doesn't exists";
 			return new ModelAndView("error", "errorMsg", errorMsg);

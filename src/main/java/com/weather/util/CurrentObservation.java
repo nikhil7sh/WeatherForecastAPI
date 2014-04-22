@@ -1,12 +1,12 @@
 package com.weather.util;
 
 
-
 /**
-* This CurrentObservation class which will give information of current forecast mapped to the retrieved json
+* This CurrentObservation class which will give information of current forecast will mapped to the retrieved json object.
 *
 * @author Nikhil
 */
+
 public class CurrentObservation {
 	private String weather;
 	private double temp_f;

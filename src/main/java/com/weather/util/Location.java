@@ -2,7 +2,7 @@ package com.weather.util;
 
 
 /**
-* This Location class which is the information about the location 
+* This Location class which will map to the json object
 *
 * @author Nikhil
 */
