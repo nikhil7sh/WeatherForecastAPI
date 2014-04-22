@@ -13,7 +13,7 @@ import com.weather.services.WeatherService;
 import com.weather.util.WUndergroundData;
 
 /**
- * This WeatherController controller of this app 
+ * This WeatherController class is a controller of this app 
  *
  * @author Nikhil
  */
@@ -27,9 +27,9 @@ public class WeatherController {
 	}
 	
 	/**
-	 * This WeatherController controller of this app 
-	 *
-	 * @author Nikhil
+	 * method to handle request coming from the app
+	 * @param request, response.
+	 * @return ModelandView object
 	 */
 	@RequestMapping(method=RequestMethod.GET, value="/weather")
 	public ModelAndView handleRequest(HttpServletRequest request,
@@ -44,7 +44,7 @@ public class WeatherController {
 			return new ModelAndView("error", "errorMsg", errorMsg);
 		}
 		else{
-			return new ModelAndView("welcomePage", "weather", weather);
+			return new ModelAndView("weatherPage", "weather", weather);
 		}
 
 
